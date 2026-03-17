@@ -254,11 +254,6 @@ h2 {
     box-shadow: none;
 }
 
-.btn5:hover {
-    transform: translateY(-7px);
-    box-shadow: 0 7px 0 0 black, 0 7px 0 0 black;
-}
-
 
 /* Glow Button Style */
 .btn6 {
