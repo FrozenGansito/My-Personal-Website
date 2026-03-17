@@ -238,5 +238,21 @@
         <p>© 2026 Gansito Freelance. All rights reserved.</p>
     </footer>
 
+    <script>
+        document.querySelectorAll('.btn5, .btn7').forEach(btn => {
+            btn.addEventListener('touchstart', function() {
+                this.classList.add('pressed');
+            }, { passive: true });
+
+            btn.addEventListener('touchend', function() {
+                this.classList.remove('pressed');
+            });
+
+            btn.addEventListener('touchcancel', function() {
+                this.classList.remove('pressed');
+            });
+        });
+    </script>
+
 </body>
 </html>

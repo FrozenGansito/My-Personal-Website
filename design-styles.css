@@ -249,7 +249,7 @@ h2 {
     font-size: 1.2rem;
 }
 
-.btn5:active {
+.btn5:active, .btn5.pressed {
     transform: translateY(0px);
     box-shadow: none;
 }
@@ -294,7 +294,7 @@ h2 {
     font-size: 1.2rem;
 }
 
-.btn7:active {
+.btn7:active, .btn7.pressed {
     transform: translateY(0px);
     box-shadow: inset gray 3px 3px 4px,
                 inset rgb(255, 255, 255) -3px -3px 6px;
