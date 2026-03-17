@@ -1,0 +1,659 @@
+@charset "utf-8";
+
+/*
+    Freelance Animation & Interactive Design Stylesheet
+    Author: Jose Sanchez
+    Date: 2/28/2026
+
+    Filename: design-styles.css
+*/
+
+/* Color Palette */
+:root {
+    --primary-color: #E7E2DD;
+    --secondary-color: #D1C7BD;
+    --accent-color: #AF8C5C;
+    --footer-color: #474440;
+}
+
+/* Font Styles */
+.figtree-regular {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Fade-in Animation on Scroll*/
+.card {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.3s ease, transform 1.3s ease;
+}
+
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*Slide in Animations*/
+/* From top to bottom */
+.logo {
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: slideIn 1.3s ease forwards;
+}
+
+/* From right to left */
+.title {
+    opacity: 0;
+    transform: translateX(50px);
+    animation: slideIn 1.3s ease forwards;
+}
+
+/* From left to right */
+.back-btn, .info {
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideIn 1.3s ease forwards;
+}
+
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* HTML & Body Styles */
+html {
+    background-color: var(--primary-color);
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: "Figtree", sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* Top Header Styles */
+.top-header {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.back-btn {
+    border: none;
+    padding: 10px;
+}
+
+.back-btn img {
+    width: 100%;
+    height: 50px;
+}
+
+
+/* Logo Styles */
+.logo {
+    justify-items: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.logo img {
+    display: block;
+    width: 80%;
+}
+
+/* Main Styles */
+.main {
+    background-color: var(--secondary-color);
+    padding-top: 30px;
+    text-align: center;
+}
+
+.main p {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+}
+
+h2 {
+    text-decoration: underline var(--accent-color);
+    padding-top: 50px;
+    font-size: 1.7rem;
+}
+
+/* Intro Styles */
+
+
+.title {
+    text-decoration: underline;
+    text-decoration-color: var(--accent-color);
+}
+
+.info {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+}
+
+.animate-intro {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    border-top: 2px solid var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+
+}
+
+
+/* Button Intros */
+.btn-intro {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Standard Button Designs */
+.std-btn-grid {
+    display: grid;
+    width: 80%;
+    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.btn1 {
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #AF8C5C;
+    border: 3px solid rgb(246, 210, 166);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.btn2 {
+    border-radius: 40px;
+    padding: 10px;
+    background-color: #484848;
+    border: 3px solid rgb(77, 242, 233);
+    box-shadow: rgb(77, 242, 233) 3px 3px 8px,
+            rgb(77, 242, 233) -3px -3px 8px;
+    font-size: 1.2rem;
+    color: rgb(77, 242, 233);
+    cursor: pointer;
+}
+
+.btn3 {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    box-shadow: inset rgb(175, 175, 175) -2px -2px 3px,
+            rgb(103, 103, 103) 1px 2px 6px,
+            rgb(255, 255, 255) -3px -3px 6px;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+}
+
+.btn4 {
+    border-radius: 40px 5px 40px 5px;
+    background-color: #b8b8b8;
+    border: 3px solid white;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* Custom Animated Buttons */
+.custom-btns {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+
+.btn5 {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    text-decoration: none;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    background: var(--accent-color);
+    color: black;
+    transform: translateY(-4px);
+    box-shadow: 0 4px 0 0 black, 0 4px 0 0 black;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    font-size: 1.2rem;
+}
+
+.btn5:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 7px 0 0 black, 0 7px 0 0 black;
+}
+
+.btn5:active {
+    transform: translateY(0px);
+    box-shadow: none;
+}
+
+
+/* Glow Button Style */
+.btn6 {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+/* Glow effect on hover */
+.btn6:hover {
+    box-shadow: 0 0 15px rgba(0, 255, 251, 0.8);
+}
+
+/* Background change when clicked */
+.btn6:active {
+    background-color: #00c8ff;
+    color: white;
+    border: 2px solid white;
+}
+
+/* Press Button Style */
+.btn7 {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 40px;
+    padding: 10px;
+    background-color: #e6e6e6;
+    color: black;
+    transform: translateY(-2px);
+    box-shadow: gray 2px 2px 6px,
+        inset gray -3px -3px 6px,
+        inset white 4px 4px 4px;
+    font-size: 1.2rem;
+}
+
+.btn7:active {
+    transform: translateY(0px);
+    box-shadow: inset gray 3px 3px 4px,
+                inset rgb(255, 255, 255) -3px -3px 6px;
+    background-color: #dcdcdc;
+    color: #ff0000;
+}
+
+.btn8 {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    padding: 1rem 2.5rem;
+    border: 1.5px solid #000000;
+    background: transparent;
+    cursor: pointer;
+    overflow: hidden;
+    font-size: 1.2rem;
+    letter-spacing: 0.15em;
+    color: #000000;
+    transition: color 0.4s ease;
+}
+
+.btn8::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #000000;
+    transform: translateX(-101%);
+    transition: transform 0.4s cubic-bezier(0.77, 0, 0.18, 1);
+    z-index: 0;
+}
+
+.btn8:hover::before { transform: translateX(0); }
+.btn8:hover { color: #ffffff; }
+
+.btn8 span {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Premium Button Styles */
+.premium-btns {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px 0;
+    gap: 20px;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.btn9 {
+    text-decoration: none;
+    color: white;
+    padding: 4rem 8rem;
+    font-size: 1.2rem;
+    background: url(gallery/proposal.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    border: 2px solid white;
+    box-shadow: 2px 2px 6px rgb(67, 67, 67);
+}
+
+.btn10 {
+    position: relative;
+    padding: 1rem 2.5rem;
+    border: 1.5px solid #e8e0d0;
+    background: black;
+    cursor: pointer;
+    overflow: hidden;
+    font-size: 1.2rem;
+    letter-spacing: 0.3rem;
+    color: #e8e0d0;
+}
+
+.btn10::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.15) 40%,
+        rgba(255, 255, 255, 0.705) 50%,
+        rgba(255, 255, 255, 0.15) 60%,
+        transparent 100%
+    );
+    transform: skewX(-20deg);
+    animation: shine 2.5s infinite;
+}
+
+@keyframes shine {
+    0%        { left: -75%; }
+    40%, 100% { left: 125%; }
+}
+
+
+.btn11 {
+    background: black;
+    border: 2px solid white;
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.btn11 span {
+    animation: colorCycle 3s infinite;
+}
+
+@keyframes colorCycle {
+    0%   { color: #a50044; }
+    25%  { color: #004d98; }
+    50%  { color: #edbb00; }
+    75%  { color: #ffed01; }
+    100% { color: #db0030; }
+}
+
+
+/* Navigation Menu Section*/
+/* NAV 1 Basic */
+.nav1 {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 32px;
+    height: 62px;
+    background: var(--footer-color);
+}
+
+.nav1-links {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    list-style: none;
+    padding: 0;
+}
+
+.nav1-links a {
+    display: block;
+    padding: 6px 13px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+    text-decoration: none;
+    border-radius: 6px;
+    transition: color 0.18s, background-color 0.18s;
+    position: relative;
+}
+
+.nav1-links a:hover { color: white; background: rgba(255,255,255,0.06); }
+.nav1-links a.active { color: white; }
+
+/* NAV 2 Dropdown */
+.demo-frame.dropdown-demo {
+    overflow: visible;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.dropdown-wrapper {
+    height: 300px;
+    position: relative;
+    overflow: visible;
+}
+
+.nav2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 62px;
+    background: var(--primary-color);
+    border-bottom: 2px solid var(--accent-color);
+    position: relative;
+    z-index: 10;
+}
+
+.nav2-links {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.nav2-links > li { position: static; }
+
+.nav2-links > li > a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 13px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.15s, color 0.15s;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.nav2-links > li > a svg {
+    width: 12px;
+    height: 12px;
+    stroke: currentColor;
+    transition: transform 0.2s;
+    flex-shrink: 0;
+}
+
+.nav2-links > li:hover > a { background: var(--secondary-color); color: black; }
+.nav2-links > li:hover > a svg { transform: rotate(180deg); }
+
+.dropdown {
+    position: absolute;
+    top: 62px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-6px);
+    min-width: 210px;
+    background: var(--primary-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 10px;
+    box-shadow: 0 10px 32px rgba(0,0,0,0.13);
+    padding: 8px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.18s, transform 0.18s;
+    z-index: 99;
+}
+
+.nav2-links > li:hover .dropdown {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateX(-50%) translateY(0);
+}
+
+.nav2-links > li > a::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    right: 0;
+    height: 6px;
+}
+
+.dropdown a {
+    display: flex;
+    align-items: center;
+    padding: 9px 11px;
+    font-size: 1.2rem;
+    color: black;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.12s, color 0.12s;
+    font-weight: 400;
+}
+
+.dropdown a:hover { background: var(--accent-color); color: black; }
+
+
+
+/* Footer Styles */
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--footer-color);
+    margin-top: 0;
+    text-align: center;
+    border-top: 2px solid var(--accent-color);
+}
+
+footer img {
+    width: 100%;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.foot-logo {
+    display: block;
+    width: 8rem;
+    padding-top: 20px;
+}
+
+footer p {
+    margin: 5px;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5rem;
+}
+
+.foot-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+}
+
+.links a {
+    text-decoration: underline var(--accent-color);
+    color: var(--accent-color);
+    padding: 5px;
+}
+
+.links h3 {
+    margin-bottom: 5px;
+    text-decoration: none;
+}
+
+
+@media (min-width: 900px) {
+    body {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    /* Logo Styles */
+    .logo {
+        width: 45rem;
+        max-width: 50rem;
+        margin: 0 auto;
+    }
+
+    p {
+        font-size: 1.3rem;
+        line-height: 2rem;
+    }
+
+    .card {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .custom-btns, .premium-btns {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .demo-frame.dropdown-demo, .demo-frame {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    /* Footer Styles */
+    footer {
+        font-size: larger;
+    }
+
+    footer p {
+        font-size: 1rem;
+    }
+
+}

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!--
+        GNSITO Freelance Web Gallery Styles Page
+
+        Author: Jose Sanchez
+        Date: 2/22/2026
+
+        Filename: galleries.html
+    -->
+
+<head>
+    <title>Gallery Styles Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="gallery_styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    
+    <!-- Header Section -->
+
+    <header>
+
+        <div class="top-header">
+
+            <a href="features.html" class="back-btn">
+                <img src="gallery/back-arrow.png" alt="Back Button">
+            </a>
+
+        </div>
+
+        <div class="logo">
+            <img src="gallery/logo.png" alt="logo">
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="photos.html" class="nav1">Photo Styles</a></li>
+                <li><a href="galleries.html" class="nav2">Gallery Styles</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <article class="main">
+
+        <!--Intro-->
+        <div class="intro">
+
+            <div class="title">
+                <h1>Gallery Styles</h1>
+            </div>
+
+            <div class="info">
+                <p>
+                    All galleries begin with a clean grid layout.
+                    The options below introduce different levels 
+                    of interactivity and browsing experience.
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- Gallery Styles -->
+
+        <section class="gallery-tiers">
+
+            <div class="card">
+                <div class="basic">
+
+                    <div class="gallery-title">
+                        <h2>Basic Gallery</h2>
+                        <p><cite>Basic Included with website</cite></p>
+                    </div>
+
+                    <div class="basic-grid">
+                        <img src="gallery/fish1.jpg" alt="">
+                        <img src="gallery/fish2.jpg" alt="">
+                        <img src="gallery/fish3.jpg" alt="">
+                        <img src="gallery/fish4.jpg" alt="">
+                        <img src="gallery/fish5.jpg" alt="">
+                        <img src="gallery/fish6.jpg" alt="">
+                    </div>
+
+                    <div class="description">
+                        <p>
+                            A clean grid layout for displaying images
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="interactive">
+
+                    <div class="gallery-title">
+                        <h2>Interactive Gallery</h2>
+                    </div>
+
+                    <div class="interactive-grid">
+                        <img src="gallery/fish1.jpg" alt="" class="zoom-img">
+                        <img src="gallery/fish2.jpg" alt="" class="zoom-img">
+                        <img src="gallery/fish3.jpg" alt="" class="zoom-img">
+                        <img src="gallery/fish4.jpg" alt="" class="zoom-img">
+                        <img src="gallery/fish5.jpg" alt="" class="zoom-img">
+                        <img src="gallery/fish6.jpg" alt="" class="zoom-img">
+                    </div>
+
+                    <div class="description">
+                        <p>
+                            Images animate and expand when selected.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="hover">
+
+                    <div class="gallery-title">
+                        <h2>Hover Gallery</h2>
+                    </div>
+
+                    <div class="hover-grid">
+                        <img src="gallery/fish1.jpg" alt="">
+                        <img src="gallery/fish2.jpg" alt="">
+                        <img src="gallery/fish3.jpg" alt="">
+                        <img src="gallery/fish4.jpg" alt="">
+                        <img src="gallery/fish5.jpg" alt="">
+                        <img src="gallery/fish6.jpg" alt="">
+                    </div>
+
+                    <div class="description">
+                        <p>
+                            Images respond with a subtle zoom or pop effect when hovered by mouse.<br>
+                            <cite>*Works best with desktop devices.*</cite>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="filter">
+
+                    <div class="gallery-title">
+                        <h2>Filter Gallery</h2>
+                    </div>
+
+                    <div class="filter-buttons">
+                        <button data-filter="all">All</button>
+                        <button data-filter="reels">Reels</button>
+                        <button data-filter="fishing-pole">Fishing Pole</button>
+                        <button data-filter="lures">Lures</button>
+                    </div>
+
+                    <div class="filter-grid">
+                        <img src="gallery/fish1.jpg" alt="" class="item reels">
+                        <img src="gallery/fish2.jpg" alt="" class="item fishing-pole">
+                        <img src="gallery/fish3.jpg" alt="" class="item lures">
+                        <img src="gallery/fish4.jpg" alt="" class="item fishing-pole">
+                        <img src="gallery/fish5.jpg" alt="" class="item reels">
+                        <img src="gallery/fish6.jpg" alt="" class="item lures">
+                    </div>
+
+                    <div class="description">
+                        <p>
+                            Allows visitors to sort images by categories for a cleaner, 
+                            more organized viewing experience.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="lightbox">
+
+                    <div class="gallery-title">
+                        <h2>Lightbox Gallery</h2>
+                    </div>
+
+                    <div class="lightbox-grid">
+                        <img src="gallery/fish1.jpg" alt="image" data-index="1">
+                        <img src="gallery/fish2.jpg" alt="image" data-index="2">
+                        <img src="gallery/fish3.jpg" alt="image" data-index="3">
+                        <img src="gallery/fish4.jpg" alt="image" data-index="4">
+                        <img src="gallery/fish5.jpg" alt="image" data-index="5">
+                        <img src="gallery/fish6.jpg" alt="image" data-index="6">
+                    </div>
+
+                    <div class="description">
+                        <p>
+                            Images open in a full-screen overlay with left and right navigation 
+                            controls and an image counter, allowing visitors to browse 
+                            seamlessly through the entire gallery.
+                        </p>
+                    </div>
+
+                </div>
+            </div>    
+
+            <div id="lightbox">
+                        <button id="lb-close" aria-label="Close">&#x2715;</button>
+                        <button id="lb-prev" class="lb-arrow" aria-label="Previous">&#8592;</button>
+                        <img id="lb-img" src="" alt="" />
+                        <button id="lb-next" class="lb-arrow" aria-label="Next">&#8594;</button>
+                        <div id="lb-counter"></div>
+                    </div>
+
+            <div class="card">
+                <div class="addon">
+
+                    <div class="title">
+                        <h2>Gallery Packages</h2>
+                    </div>
+
+                    <div class="addon-info">
+                        <div class="card">
+                            <div class="info-title">
+                                <h3>Enhanced Gallery</h3>
+                                <p><cite>Hover/Interactive + Filter</cite></p>
+                            </div>
+
+                            <div class="package-info">
+                                <p>
+                                    Combines smooth hover animations with interactive category filtering,
+                                    allowing visitors to explore and sort images effortlessly while
+                                    enjoying visual effects.
+                                </p>
+                                <p>
+                                    <b>Best for:</b> Portfolios and multi-service showcases that need
+                                    organization with a modern touch.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="info-title">
+                                <h3>Advanced Gallery</h3>
+                                <p><cite>Lightbox + Filter</cite></p>
+                            </div>
+
+                            <div class="package-info">
+                                <p>
+                                    Includes full-screen lightbox viewing with arrow navigation and image
+                                    counter, paired with category filtering for a seamless and immersive
+                                    browsing experience.
+                                </p>
+                                <p>
+                                    <b>Best for:</b> Events, photography, and projects where detailed 
+                                    viewing and structured browsing are essential.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="info-title">
+                                <h3>Premium Gallery</h3>
+                                <p><cite>Lightbox + Hover + Filter</cite></p>
+                            </div>
+
+                            <div class="package-info">
+                                <p>
+                                    The most complete gallery experience. Features interactive hover
+                                    effects, category filtering, and a full-screen lightbox with navigation
+                                    and image indexing delivering a polished, high-end presentation.
+                                </p>
+                                <p>
+                                    <b>Best for:</b> Clients who want a fully interactive, professional
+                                    showcase with maximum visual impact. 
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+
+        <script src="galleries.js" defer></script>
+        <script src="fade-animation.js" defer></script>
+
+    </article>
+
+
+    <footer>
+        <img src="gallery/logo.png" alt="logo" class="foot-logo">
+        <p>Custom Websites for Wedding & Small Businesses</p>
+        <section class="links">
+            <h3>Quick Links</h3>
+            <section class="foot-nav">
+                <a href="index.html">Front Page</a>
+                <a href="features.html">Design & Features</a>
+                <a href="my-work.html">My Work</a>
+                <a href="pricing.html">Pricing</a>
+            </section>
+            <a href="#">Email Me</a>
+        </section>
+        <p>© 2026 Gansito Freelance. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

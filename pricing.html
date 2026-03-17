@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!--
+        GNSITO Freelance Web Pricing Page
+
+        Author: Jose Sanchez
+        Date: 3/11/2026
+
+        Filename: pricing.html
+    -->
+
+<head>
+    <title>Pricing</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pricing-styles.css">
+    <script src="fade-animation.js" defer></script>
+    <script src="pricing.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    
+    <!-- Header Section -->
+
+    <header>
+
+        <div class="top-header">
+
+            <a href="index.html" class="back-btn">
+                <img src="gallery/back-arrow.png" alt="Back Button">
+            </a>
+
+        </div>
+
+        <div class="logo">
+            <img src="gallery/logo.png" alt="logo">
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="features.html" class="nav1">Design & Features</a></li>
+                <li><a href="mywork.html" class="nav2">My Work</a></li>
+                <li><a href="pricing.html" class="nav3">Pricing</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <div class="intro">
+            <div class="title">
+                <h1>Pricing</h1>
+            </div>
+
+            <div class="info">
+                <p>
+                    Pricing is based on the features and customization you choose for your 
+                    website. Use the selections below to explore available options and generate
+                    a rough estimate for your project. 
+                </p>
+            </div>
+
+            <div class="note">
+                <p class="card">
+                    <cite>Final pricing may vary depending on customization and project scope.</cite>
+                </p>
+            </div>
+        </div>
+
+        <section class="features">
+
+            <!--Website Bundles-->
+            <div class="web-group">
+                <h2 class="card">Website Bundles</h2>
+
+                <!--Small Website Package-->
+                <div class="feature-option">
+
+                    <div class="feature-left">
+                        <label for="small-web">
+                            <b>Small Web Package</b><br>
+                            Includes:
+                            <ul class="side-note">
+                                <li>Home page</li>
+                                <li>Mobile responsive design</li>
+                                <li>Basic button styling</li>
+                                <li>Basic image placement</li>
+                                <li>Deployment/Launch help</li>
+                            </ul>
+                        </label>
+                    </div>
+
+                    <div class="feature-right">
+                        <span class="price">$300</span>
+                        <input type="radio" name="web-bundles" id="small-web" data-price="300">
+                    </div>
+                </div>
+
+                <!--Standard Website Package-->
+                <div class="feature-option">
+
+                    <div class="feature-left">
+                        <label for="stnd-web">
+                            <b>Standard Web Package</b><br>
+                            Includes:
+                            <ul class="side-note">
+                                <li>3 pages (Home page + 2)</li>
+                                <li>Mobile responsive design</li>
+                                <li>Basic button styling</li>
+                                <li>Basic image placement</li>
+                                <li>Deployment/Launch help</li>
+                            </ul>
+                        </label>
+                    </div>
+
+                    <div class="feature-right">
+                        <span class="price">$400</span>
+                        <input type="radio" name="web-bundles" id="stnd-web" data-price="400">
+                    </div>
+
+                </div>
+
+                <!--Additional Pages-->
+                <div class="feature-option">
+
+                    <div class="feature-left">
+                        <label for="add-pages">
+                            Additional Pages <br>
+                            ($100 each)
+                        </label>
+                    </div>
+
+                    <div class="feature-right">
+                        <div class="extra-pages">
+                            <input type="number" id="add-pages" placeholder="0" min="0" data-page-price="100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--Logo & Branding-->
+            <div class="logos-group">
+
+                <h2 class="card">Logo & Branding</h2>
+
+                <!--Basic Logo-->
+                <div class="feature-option">
+
+                    <div class="feature-left">
+                        <label for="basic-logo">
+                            <b>Basic Logo</b>
+                            <ul class="side-note">
+                                <li>Minimal brand logos</li>
+                                <li>Clean modern styles</li>
+                                <li>PNG + JPG export</li>
+
+                            </ul>
+                        </label>
+                    </div>
+                    
+                    <div class="feature-right">
+                        <span class="price">$50</span>
+                        <input type="radio" name="logo-brand" id="basic-logo" data-price="50">
+                    </div>
+                </div>
+
+                <!--Standard Logo-->
+                <div class="feature-option">
+                    
+                    <div class="feature-left">
+                        <label for="standard-logo">
+                            <b>Standard Logo</b>
+                            <ul class="side-note">
+                                <li>More custom styling</li>
+                                <li>Custom icon </li>
+                                <li>PNG + JPG + SVG export</li>
+                            </ul>
+                        </label>
+                    </div>
+
+                    <div class="feature-right">
+                        <span class="price">$100</span>
+                        <input type="radio" name="logo-brand" id="standard-logo" data-price="100">
+                    </div>
+
+                </div>
+
+                <!--Premium Logo-->
+                <div class="feature-option">
+
+                    <div class="feature-left">
+                        <label for="premium-logo">
+                            <b>Premium Logo</b>
+                            <ul class="side-note">
+                                <li>Illustration heavy</li>
+                                <li>Mascot Style</li>
+                                <li>Complex Branding</li>
+                                <li>PNG + JPG + SVG export</li>
+                            </ul>
+                        </label>
+                    </div>
+
+                    <div class="feature-right">
+                        <span class="price">$200+</span>
+                        <input type="radio" name="logo-brand" id="premium-logo" data-price="200">
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!--Photos & Galleries-->
+            <div class="photos-group">
+
+                <h2 class="card">Photo Styles</h2>
+
+                <!--Basic Photo-->
+                <div class="feature-option">
+
+                    <div class="feature-left">
+                        <label for="basic-photo">
+                            <b>Basic Photo Display</b>
+                        </label>
+                    </div>
+
+                    <div class="feature-right">
+                        <span class="price">(Included)</span>
+                        <input type="radio" name="photo-styles" id="basic-photo" data-price="0">
+                    </div>
+                </div>
+
+                <!--Shadow Card-->
+                <div class="feature-option">
+
+                    <div class="feature-left">
+                        <label for="shadow-photo">
+                            <b>Shadow Card Display</b>
+                        </label>
+                    </div>
+
+                    <div class="feature-right">
+                        <span class="price">$25</span>
+                        <input type="radio" name="photo-styles" id="shadow-photo" data-price="25">
+                    </div>
+                </div>
+
+                <!--Framed Border-->
+                <div class="feature-option">
+
+                    <div class="feature-left">
+                        <label for="framed-photo">
+                            <b>Framed Border Display</b>
+                        </label>
+                    </div>
+
+                    <div class="feature-right">
+                        <span class="price">$25</span>
+                        <input type="radio" name="photo-styles" id="framed-photo" data-price="25">
+                    </div>
+                </div>
+
+                <!--Polaroid Style-->
+                <div class="feature-option">
+
+                    <div class="feature-left">
+                        <label for="polaroid-photo">
+                            <b>Polaroid Style</b>
+                        </label>
+                    </div>
+                    
+                    <div class="feature-right">
+                        <span class="price">$50</span>
+                        <input type="radio" name="photo-styles" id="polaroid-photo" data-price="50">
+                    </div>
+                </div>
+
+                <!--Window View-->
+                <div class="feature-option">
+
+                    <div class="feature-left">
+                        <label for="window-photo">
+                            <b>Window View Style</b>
+                        </label>
+                    </div>
+                    
+                    <div class="feature-right">
+                        <span class="price">$75</span>
+                        <input type="radio" name="photo-styles" id="window-photo" data-price="75">
+                    </div>
+                </div>
+
+                <h2 class="card">Gallery Styles</h2>
+
+                <!--Grid Gallery-->
+                <div class="feature-option">
+
+                    <div class="feature-left">
+                        <label for="grid-gallery">
+                            <b>Grid Gallery</b>
+                        </label>
+                    </div>
+
+                    <div class="feature-right">
+                        <span class="price">(Included)</span>
+                        <input type="radio" name="gallery-styles" id="grid-gallery" data-price="0">
+                    </div>
+                </div>
+
+                <!--Interactive Gallery-->
+                <div class="feature-option">
+
+                    <div class="feature-left">
+                        <label for="interactive-gallery">
+                            <b>Interactive Gallery</b>
+                        </label>
+                    </div>
+
+                    <div class="feature-right">
+                        <span class="price">$75</span>
+                        <input type="radio" name="gallery-styles" id="interactive-gallery" data-price="75">
+                    </div>
+                </div>
+
+                <!--Hover Gallery-->
+                <div class="feature-option">
+
+                    <div class="feature-left">
+                        <label for="hover-gallery">
+                            <b>Hover Gallery</b>
+                        </label>
+                    </div>
+
+                    <div class="feature-right">
+                        <span class="price">$75</span>
+                        <input type="radio" name="gallery-styles" id="hover-gallery" data-price="75">
+                    </div>
+                </div>
+
+                <!--Filter Gallery-->
+                <div class="feature-option">
+
+                    <div class="feature-left">
+                        <label for="filter-gallery">
+                            <b>Filter Gallery</b>
+                        </label>
+                    </div>
+
+                    <div class="feature-right">
+                        <span class="price">$100</span>
+                        <input type="radio" name="gallery-styles" id="filter-gallery" data-price="100">
+                    </div>
+                </div>
+
+                <!--Lightbox Gallery-->
+                <div class="feature-option">
+
+                    <div class="feature-left">
+                        <label for="lightbox-gallery">
+                            <b>Lightbox Gallery</b>
+                        </label>
+                    </div>
+
+                    <div class="feature-right">
+                        <span class="price">$150</span>
+                        <input type="radio" name="gallery-styles" id="lightbox-gallery" data-price="150">
+                    </div>
+                    
+                </div>
+
+
+                <!--Gallery Packages-->
+                <h2 class="card">Gallery Packages</h2>
+
+                <!--Enhanced Gallery-->
+                <div class="feature-option">
+                    
+                    <div class="feature-left">
+                        <label for="enhanced-gallery">
+                            <b>Enhanced Gallery</b>
+                            <ul class="side-note">
+                                <li>Interactive/Hover + Filter</li>
+                            </ul>
+                        </label>
+                    </div>
+
+                    <div class="feature-right">
+                        <span class="price">$130</span>
+                        <input type="radio" name="gallery-styles" id="enhanced-gallery" data-price="130">
+                    </div>
+                    
+                </div>
+
+                <!--Advanced Gallery-->
+                <div class="feature-option">
+
+                    <div class="feature-left">
+                        <label for="advanced-gallery">
+                            <b>Advanced Gallery</b>
+                            <ul class="side-note">
+                                <li>Lightbox + Filter</li>
+                            </ul>
+                        </label>
+                    </div>
+
+                    <div class="feature-right">
+                        <span class="price">$200</span>
+                        <input type="radio" name="gallery-styles" id="advanced-gallery" data-price="200">
+                    </div>
+
+                </div>
+
+                <!--Premium Gallery-->
+                <div class="feature-option">
+
+                    <div class="feature-left">
+                        <label for="premium-gallery">
+                            <b>Premium Gallery</b>
+                            <ul class="side-note">
+                                <li>Lightbox + Filter + Hover</li>
+                                <li>(Desktop Only)</li>
+                            </ul>
+                        </label>
+                    </div>
+
+                    <div class="feature-right">
+                        <span class="price">$250</span>
+                        <input type="radio" name="gallery-styles" id="premium-gallery" data-price="250">
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!--Motion & Scroll Animations-->
+            <div class="animation-group">
+                <h2 class="card">Entrance Animation</h2>
+
+                <div class="feature-option">
+
+                    <div class="feature-left">
+                        <label for="animation">
+                            <div class="bundle">
+                                <b>Fade-in & Slide-in Animation</b>
+                                <ul class="side-note">
+                                    <li>Slide-in intro</li>
+                                    <li>Fade-in on scroll</li>
+                                    <li>Smooth content reveal</li>
+                                </ul>
+                            </div>
+                        </label>
+                    </div>
+                    
+                    <div class="feature-right">
+                        <span class="price">$75</span>
+                        <input type="radio" name="page-animation" id="animation" data-price="75">
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!--Button Pricing-->
+            <div class="button-group">
+                <h2 class="card">Button Styles</h2>
+
+                <!--Standard Button-->
+                <div class="feature-option">
+
+                    <div class="feature-left">
+                        <label for="standard-button">
+                            <div class="bundle">
+                                <b>Standard Button</b>
+                                <ul class="side-note">
+                                    <li>Solid Color</li>
+                                    <li>Rounded/Straight Corners</li>
+                                </ul>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="feature-right">
+                        <span class="price">(Included)</span>
+                        <input type="radio" name="button-styles" id="standard-button" data-price="0">
+                    </div>
+
+                </div>
+
+                <!--Custom Button-->
+                <div class="feature-option">
+
+                    <div class="feature-left">
+                        <label for="custom-button">
+                            <div class="bundle">
+                                <b>Custom Button</b>
+                                <ul class="side-note">
+                                    <li>Press down animation</li>
+                                    <li>Glow / Highlight hover</li>
+                                </ul>
+                            </div>
+                            
+                        </label>
+                    </div>
+
+                    <div class="feature-right">
+                        <span class="price">$30</span>
+                        <input type="radio" name="button-styles" id="custom-button" data-price="30">
+                    </div>
+
+                </div>
+
+                <!--Premium Button-->
+                <div class="feature-option">
+                
+                    <div class="feature-left">
+                        <label for="premium-button">
+                            <div class="bundle">
+                                <b>Premium Button</b>
+                                <ul class="side-note">
+                                    <li>Photo background buttons</li>
+                                    <li>Animated buttons</li>
+                                </ul>
+
+                            </div>
+                            
+                        </label>
+                    </div>
+                    
+                    <div class="feature-right">
+                        <span class="price">$50</span>
+                        <input type="radio" name="button-styles" id="premium-button" data-price="50">
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!--Navigation Menus-->
+            <div class="nav-group">
+                <h2 class="card">Navigation Menus</h2>
+
+                <!--Basic Menu-->
+                <div class="feature-option">
+
+                    <div class="feature-left">
+                        <label for="basic-menu">
+                            <b>Basic Menu</b>
+                        </label>
+                    </div>
+
+                    <div class="feature-right">
+                        <span class="price">(Included)</span>
+                        <input type="radio" name="nav-menus" id="basic-menu" data-price="0">
+                    </div>
+
+                </div>
+
+                <!--Enhanced Menu-->
+                <div class="feature-option">
+
+                    <div class="feature-left">
+                        <label for="enhanced-menu">
+                            <b>Enhanced Menu</b>
+                        </label>
+                    </div>
+
+                    <div class="feature-right">
+                        <span class="price">$50</span>
+                        <input type="radio" name="nav-menus" id="enhanced-menu" data-price="50">
+                    </div>
+
+                </div>
+            </div>
+            
+
+            <!--Forms-->
+            <div class="forms-group">
+                <h2 class="card">Forms</h2>
+
+                <!--Contact Form-->
+                <div class="feature-option">
+
+                    <div class="feature-left">
+                        <label for="contact-form">
+                            <b>Contact Form</b>
+                        </label>
+                    </div>
+
+                    <div class="feature-right">
+                        <span class="price">$50</span>
+                        <input type="radio" name="forms" id="contact-form" data-price="50">
+                    </div>
+
+                </div>
+
+                <!--RSVP Form-->
+                <div class="feature-option">
+
+                    <div class="feature-left">
+                        <label for="rsvp">
+                            <b>RSVP Form</b>
+                        </label>
+                    </div>
+
+                    <div class="feature-right">
+                        <span class="price">$50</span>
+                        <input type="radio" name="forms" id="rsvp" data-price="50">
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!--Maps-->
+            <div class="map-group">
+                <h2 class="card">Maps</h2>
+
+                <!--Standard Map-->
+                <div class="feature-option">
+
+                    <div class="feature-left">
+                        <label for="standard-map">
+                            <b>Standard Map</b>
+                        </label>
+                    </div>
+
+                    <div class="feature-right">
+                        <span class="price">$25</span>
+                        <input type="radio" name="maps" id="standard-map" data-price="25">
+                    </div>
+
+                </div>
+
+                <!--Interactive Map-->
+                <div class="feature-option">
+
+                    <div class="feature-left">
+                        <label for="interactive-map">
+                            <b>Interactive Map</b>
+                        </label>
+                    </div>
+
+                    <div class="feature-right">
+                        <span class="price">$40</span>
+                        <input type="radio" name="maps" id="interactive-map" data-price="40">
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!--Bilingual Support-->
+            <div class="bilingual-group">
+                <h2 class="card">Bilingual Support</h2>
+
+                <div class="bilingual-support-feature">
+                    <div class="feature-option">
+
+                        <div class="feature-left">
+                            <label for="bilingual">
+                                <b>Bilingual Support</b>
+                                <ul class="side-note">
+                                    <li>Language toggle</li>
+                                    <li>1 translated page</li>
+                                    <li>$20 per additional page</li>
+                                </ul>
+                            </label>
+                        </div>
+
+                        <div class="feature-right">
+                            <div class="price-radio">
+                                <span class="price">$100</span>
+                                <input type="checkbox" name="language" id="bilingual" data-price="100">
+                            </div>
+
+                            <div class="extra-pages">
+                                <label for="extra-pages">Extra Pages</label>
+                                <input type="number" id="extra-pages" placeholder="0" min="0" data-page-price="20">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!--Calculator-->
+            <div class="cal-group">
+                <h2 class="card">Calculator</h2>
+
+                <!--Standard Calculator-->
+                <div class="feature-option">
+
+                    <div class="feature-left">
+                        <label for="standard-cal">
+                            <b>Standard Calculator</b>
+                            <ul class="side-note">
+                                <li>Live total update</li>
+                                <li>Basic math logic</li>
+                                <li>Dropdown or checkbox selections</li>
+                            </ul>
+                        </label>
+                    </div>
+
+                    <div class="feature-right">
+                        <span class="price">$150</span>
+                        <input type="radio" name="calculators" id="standard-cal" data-price="150">
+                    </div>
+
+                </div>
+
+                <!--Advanced Calculator-->
+                <div class="feature-option">
+
+                    <div class="feature-left">
+                        <label for="adv-cal">
+                            <b>Advanced Calculator</b>
+                            <ul class="side-note">
+                                <li>Live total update</li>
+                                <li>Conditional pricing rules</li>
+                                <li>Discounts based on quantity</li>
+                                <li>Error catching</li>
+                                <li>Required selections</li>
+                                <li>Possibly tax logic</li>
+                                <li>Custom validation messages</li>
+                            </ul>
+                        </label>
+                    </div>
+
+                    <div class="feature-right">
+                        <span class="price">$300</span>
+                        <input type="radio" name="calculators" id="adv-cal" data-price="300">
+                    </div>
+
+                </div>
+            </div>
+
+            <!--Password Protection-->
+            <div class="pw-group">
+                <h2 class="card">Password Protection</h2>
+
+                <div class="subtle-note">
+                    <p class="card">
+                        *Adds a layer of privacy but should not be considered 
+                        a fully secure authentication system.*
+                    </p>
+                </div>
+
+                <div class="feature-option">
+
+                    <div class="feature-left">
+                        <label for="pw">
+                            <b>Password Gate</b>
+                            <ul class="side-note">
+                                <li>Guest password access</li>
+                                <li>Redirect protection</li>
+                                <li>Adds a layer of privacy</li>
+                            </ul>
+                        </label>
+                    </div>
+
+                    <div class="feature-right">
+                        <span class="price">$40</span>
+                        <input type="radio" name="pw-group" id="pw" data-price="40">
+                    </div>
+
+                </div>
+
+                
+            </div>
+
+            <div class="payment">
+
+                <h2 class="card">Payment Information</h2>
+
+                <div class="note">
+                    <b>Payment Terms</b>
+                    <ul class="payment-list">
+                        <li>50% deposit required to begin the project</li>
+                        <li>Remainig balance is due once the website is completed and ready to launch</li>
+                    </ul>
+                    <p>
+                        If new features or changes are added during development, 
+                        the final price will be adjusted accordingly, and the
+                        remaining balance will reflect the updated total.
+                    </p>
+                    <p>
+                        Additional features requested during development will be quoted
+                        and approved before being added to the project. 
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <div id="price-bar">
+            <span>Estimated Total</span>
+            <span id="pb-total-amount">$0</span>
+        </div>
+
+
+    </main>
+
+    <footer>
+        <img src="gallery/logo.png" alt="logo" class="foot-logo">
+        <p>Custom Websites for Wedding & Small Businesses</p>
+        <p>gnsito.freelance@gmail.com</p>
+        <section class="links">
+            <h3>Quick Links</h3>
+            <section class="foot-nav">
+                <a href="index.html">Front Page</a>
+                <a href="features.html">Design & Features</a>
+                <a href="mywork.html">My Work</a>
+                <a href="pricing.html">Pricing</a>
+            </section>
+            <a onclick="window.location.href='mailto:gnsito.freelance@gmail.com'">Email Me</a>
+        </section>
+        <p>© 2026 Gansito Freelance. All rights reserved.</p>
+    </footer>
+
+    
+
+</body>
+</html>
+
+    

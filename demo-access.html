@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!--
+        GNSITO Freelance Demo Access Page
+
+        Author: Jose Sanchez
+        Date: 3/13/2026
+
+        Filename: demo-access.html
+    -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Access</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="password-styles.css">
+    <script src="fade-animation.js" defer></script>
+</head>
+<body>
+
+    <header>
+
+        <div class="top-header">
+            <a href="password.html" class="back-btn">
+                <img src="gallery/back-arrow.png" alt="Back Button">
+            </a>
+        </div>
+
+        <div class="logo">
+            <img src="gallery/logo.png" alt="">
+        </div>
+
+    </header>
+
+    <section class="main">
+        <div class="intro">
+
+            <div class="title">
+                <h1>Congragulations!</h1>
+            </div>
+
+            <div class="info">
+                <p>
+                    This page represents the private website content that guests
+                    would see after entering the correct password.
+                </p>
+            </div>
+
+            <div class="title">
+                <h2>Direct Page Access Protection</h2>
+            </div>
+
+            <div class="info">
+                If someone attempts to access a page directly by typing its web address
+                into the browser, the website first checks whether the password has been 
+                entered. If not, the visitor is automatically redirected back to the 
+                password entry page before the content can be viewed.
+            </div>
+        </div>
+
+
+        
+    </section>
+
+    <footer>
+        <img src="gallery/logo.png" alt="logo" class="foot-logo">
+        <p>Custom Websites for Wedding & Small Businesses</p>
+        <p>gnsito.freelance@gmail.com</p>
+        <section class="links">
+            <h3>Quick Links</h3>
+            <section class="foot-nav">
+                <a href="index.html">Front Page</a>
+                <a href="features.html">Design & Features</a>
+                <a href="mywork.html">My Work</a>
+                <a href="pricing.html">Pricing</a>
+            </section>
+            <a onclick="window.location.href='mailto:gnsito.freelance@gmail.com'">Email Me</a>
+        </section>
+        <p>© 2026 Gansito Freelance. All rights reserved.</p>
+    </footer>
+
+    <script>
+        if(sessionStorage.getItem("weddingAccess") !== "allowed") {
+            window.location.replace("password.html");
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!--
+        GNSITO Freelance Bilingual Support Page
+
+        Author: Jose Sanchez
+        Date: 3/10/2026
+
+        Filename: bilingual.html
+    -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilingual Support</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bilingual-styles.css">
+    <script src="fade-animation.js" defer></script>
+    <script src="lang-toggle.js" defer></script>
+</head>
+<body>
+
+    <header>
+
+        <div class="top-header">
+            <a href="features.html" class="back-btn">
+                <img src="gallery/back-arrow.png" alt="Back Button">
+            </a>
+        </div>
+
+        <div class="logo">
+            <img src="gallery/logo.png" alt="">
+        </div>
+
+    </header>
+
+    <section class="main">
+        <div class="intro">
+
+            <div class="title">
+                <h1>
+                    <span class="en">Bilingual Support</span>
+                    <span class="es">Apoyo Bilingue</span>
+                </h1>
+            </div>
+
+            <div class="info">
+                <p>
+                    <span class="en">
+                        Bilingual support allows website content to be displayed in both
+                        English and Spanish, helping reach a wider audience and making
+                        information accessible to more visitors.
+                    </span>
+                    <span class="es">
+                        El soporte bilingüe permite que el contenido del sitio web se muestre 
+                        en ambos inglés y español, ayudando a llegar a un público más amplio y 
+                        haciendo información accesible a más visitantes.
+                    </span>
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="language-toggle">
+                <button data-lang="en" onclick="setLanguage('en')">English</button>
+                <p><b>|</b></p>
+                <button data-lang="es" onclick="setLanguage('es')">Español</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="description">
+                <p>
+                    <span class="en">
+                        Visitors can easily switch between English and Spanish
+                        using a simple language toggle.
+                    </span>
+                    <span class="es">
+                        Los visitantes pueden cambiar fácilmente entre inglés y español 
+                        mediante un sencillo interruptor de idioma.
+                    </span>
+                </p>
+            </div>
+        </div>
+
+
+        <div class="support">
+            <div class="card">
+                <h2>
+                    <span class="en">
+                        Supported Areas
+                    </span>
+                    <span class="es">
+                        Áreas Apoyadas
+                    </span>
+                </h2>
+            </div>
+
+
+            <span class="en">
+                <p>Spanish content can be added to:</p>
+                <ul>
+                    <li class="card">Page introductions</li>
+                    <li class="card">Navigation menus</li>
+                    <li class="card">Event details</li>
+                    <li class="card">Contact forms</li>
+                    <li class="card">RSVP instructions</li>
+                </ul>
+            </span>
+            <span class="es">
+                <p>Se puede añadir contenido en español a:</p>
+                <ul>
+                    <li class="card">Introducciones de páginas</li>
+                    <li class="card">Menús de navegación</li>
+                    <li class="card">Detalles del evento</li>
+                    <li class="card">Formularios de contacto</li>
+                    <li class="card">Instrucciones de RSVP</li>
+                </ul>
+            </span>
+
+        </div>
+
+
+    
+    </section>
+
+    <footer>
+        <img src="gallery/logo.png" alt="logo" class="foot-logo">
+        <p>Custom Websites for Wedding & Small Businesses</p>
+        <p>gnsito.freelance@gmail.com</p>
+        <section class="links">
+            <h3>Quick Links</h3>
+            <section class="foot-nav">
+                <a href="index.html">Front Page</a>
+                <a href="features.html">Design & Features</a>
+                <a href="mywork.html">My Work</a>
+                <a href="pricing.html">Pricing</a>
+            </section>
+            <a onclick="window.location.href='mailto:gnsito.freelance@gmail.com'">Email Me</a>
+        </section>
+        <p>© 2026 Gansito Freelance. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

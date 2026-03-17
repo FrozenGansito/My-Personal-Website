@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!--
+        GNSITO Freelance Web Maps & Location Page
+
+        Author: Jose Sanchez
+        Date: 3/9/2026
+
+        Filename: maps.html
+    -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maps & Location Integration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="maps-styles.css">
+    <script src="fade-animation.js" defer></script>
+</head>
+<body>
+
+    <header>
+
+        <div class="top-header">
+            <a href="features.html" class="back-btn">
+                <img src="gallery/back-arrow.png" alt="Back Button">
+            </a>
+        </div>
+
+        <div class="logo">
+            <img src="gallery/logo.png" alt="">
+        </div>
+
+    </header>
+
+    <section class="main">
+        <div class="intro">
+
+            <div class="title">
+                <h1>Maps & Location Integration</h1>
+            </div>
+
+            <div class="info">
+                <p>
+                    Location features help visitors easily find venues, 
+                    businesses, or event destinations. Maps can be displayed 
+                    as a simple location preview with a directions link or 
+                    as a fully interactive embedded map.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="map-standard">
+            <div class="card">
+                <h2>Standard Map</h2>
+            </div>
+            <div class="card">
+                <div class="intro">
+                    <p>
+                        A location photo with a directions button that link visitors
+                        directly to navigation for the destination.
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="location">
+                    <p>
+                        <b>Oak Mountain Beach</b><br>
+                        <b>Location:</b>
+                        Oak Mountain Beach, Pelham, AL 35124
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="map-pic">
+                    <img src="gallery/oakmtn.jpg" alt="" class="oakmtn-pic">
+                </div>
+            </div>
+            <div class="card">
+                <div class="button">
+                    <a href="https://maps.app.goo.gl/8WXN6kDWy6nv9hz68" class="btn" id="directionsBtn" target="_blank">Get Directions</a>
+                        <script>
+                            document.getElementById('directionsBtn').addEventListener('click', function(e) {
+                                e.preventDefault();
+                                const url = this.href;
+                                const target = this.target;
+
+                                setTimeout(() => {
+                                    window.open(url, target);
+                                }, 500);
+                            });
+                        </script>
+                </div>
+            </div>
+        </div>
+
+        <div class="map-embed">
+            <div class="card">
+                <h2>Interactive Map</h2>
+            </div>
+            <div class="card">
+                <div class="intro">
+                    <p>
+                        A fully interactive map embedded from Google Maps that allows
+                        visitors to zoom, move around the map, and open directions.
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="location">
+                    <p>
+                        <b>Oak Mountain Beach</b><br>
+                        <b>Location:</b>
+                        Oak Mountain Beach, Pelham, AL 35124
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11005.673922098216!2d-86.76038940869584!3d33.32532398998125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x888923865c0b9a47%3A0x7f09c19a1e6aa922!2sOak%20Mountain%20Beach!5e1!3m2!1sen!2sus!4v1773072490735!5m2!1sen!2sus" 
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <footer>
+        <img src="gallery/logo.png" alt="logo" class="foot-logo">
+        <p>Custom Websites for Wedding & Small Businesses</p>
+        <p>gnsito.freelance@gmail.com</p>
+        <section class="links">
+            <h3>Quick Links</h3>
+            <section class="foot-nav">
+                <a href="index.html">Front Page</a>
+                <a href="features.html">Design & Features</a>
+                <a href="mywork.html">My Work</a>
+                <a href="pricing.html">Pricing</a>
+            </section>
+            <a onclick="window.location.href='mailto:gnsito.freelance@gmail.com'">Email Me</a>
+        </section>
+        <p>© 2026 Gansito Freelance. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!--
+        GNSITO Freelance Pricing Calculator Page
+
+        Author: Jose Sanchez
+        Date: 3/11/2026
+
+        Filename: calculator.html
+    -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Pricing Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="calculator-styles.css">
+    <script src="fade-animation.js" defer></script>
+</head>
+<body>
+
+    <header>
+
+        <div class="top-header">
+            <a href="features.html" class="back-btn">
+                <img src="gallery/back-arrow.png" alt="Back Button">
+            </a>
+        </div>
+
+        <div class="logo">
+            <img src="gallery/logo.png" alt="">
+        </div>
+
+    </header>
+
+    <section class="main">
+        <div class="intro">
+
+            <div class="title">
+                <h1>Interactive Pricing Calculator</h1>
+            </div>
+
+            <div class="info">
+                <p>
+                    An interactive calculator allows customers to estimate cost
+                    of products or services based on their selections. This
+                    feature works well for rentals, custom orders, catering,
+                    and service quotes.
+                </p>
+            </div>
+
+            <div class="note">
+                <p>*This example calculator is for demonstration purposes.*</p>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="calculator">
+
+                <label>Tables 6ft ($10 each)</label>
+                <input type="number" id="tables6" placeholder="0" min="0">
+
+                <label>Tables 8ft ($12 each)</label>
+                <input type="number" id="tables8" placeholder="0" min="0">
+
+                <label>Round Tables ($15 each)</label>
+                <input type="number" id="round" placeholder="0" min="0">
+
+                <label>Chairs ($2 each)</label>
+                <input type="number" id="chairs" placeholder="0" min="0">
+
+                <label>Tents ($50 each)</label>
+                <input type="number" id="tents" placeholder="0" min="0">
+
+                <label>Delivery Distance ($2 per mile)</label>
+                <input type="number" id="miles" placeholder="0" min="0">
+
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="total-box">
+                <h3>Estimated Total: $<span id="total">0</span></h3>
+            </div>
+        </div>
+
+        <script>
+            function calculateTotal() {
+                let tables6 = getValue("tables6") * 10;
+                let tables8 = getValue("tables8") * 12;
+                let round = getValue("round") * 15;
+                let chairs = getValue("chairs") * 2;
+                let tents = getValue("tents") * 50;
+                let miles = getValue("miles") * 2;
+
+                let total = tables6 + tables8 + round + chairs + tents + miles;
+
+                document.getElementById("total").textContent = total.toFixed(2);
+            }
+
+            document.querySelectorAll("input").forEach(input => {
+                input.addEventListener("input", calculateTotal);
+            })
+
+            function getValue(id) {
+                let input = document.getElementById(id);
+                let value = parseFloat(input.value);
+
+                if (isNaN(value) || value < 0) {
+                    return 0;
+                }
+
+                return value;
+            }
+            document.querySelectorAll('input[type="number"]').forEach(input => {
+                input.addEventListener("keydown", function(e) {
+                    if (e.key === "-") {
+                        e.preventDefault();
+                    }
+                });
+            });
+        </script>
+
+    </section>
+
+    <footer>
+        <img src="gallery/logo.png" alt="logo" class="foot-logo">
+        <p>Custom Websites for Wedding & Small Businesses</p>
+        <p>gnsito.freelance@gmail.com</p>
+        <section class="links">
+            <h3>Quick Links</h3>
+            <section class="foot-nav">
+                <a href="index.html">Front Page</a>
+                <a href="features.html">Design & Features</a>
+                <a href="mywork.html">My Work</a>
+                <a href="pricing.html">Pricing</a>
+            </section>
+            <a onclick="window.location.href='mailto:gnsito.freelance@gmail.com'">Email Me</a>
+        </section>
+        <p>© 2026 Gansito Freelance. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

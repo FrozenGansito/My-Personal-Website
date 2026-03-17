@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        GNSITO Freelance Web Dev Home Page
+
+        Author: Jose Sanchez
+        Date: 2/12/2026
+
+        Filename: index.html
+    -->
+
+    <title>GNSITO Freelance Web Development</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="gf_styles1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <script src="fade-animation.js" defer></script>
+</head>
+
+<body>
+
+    <div class="contact">
+        <div class="slide-in-right">
+            <a href="https://www.facebook.com/profile.php?id=61586808749252" target="_blank">
+                <img src="gallery/fb-icon.png" alt="facebook" class="facebook-icon">
+            </a>
+        </div>
+        <div class="slide-in-left">
+            <a onclick="window.location.href='mailto:gnsito.freelance@gmail.com'">
+                <img src="gallery/email-icon.png" alt="email" class="email-icon">
+            </a>
+        </div>
+    </div>
+
+    <section class="logo">
+        <img src="gallery/logo.png" alt="GNSITO Freelance Web Development">
+    </section>
+
+    <section class="profile">
+        <div class="intro">
+            <h1>
+                Gansito (Jose S.)
+            </h1>
+            <p>
+                Freelance Front-End Developer
+            </p>
+        </div>
+
+        <img src="gallery/profile-pic.png" alt="Profile" class="profile-pic">
+
+        <div class="fade-in">
+            <div class="about-me">
+                <p>
+                    I'm a freelance front-end developer currently studying Web and Mobile
+                    Applications, where I continue expanding my skills in modern web 
+                    technologies and user-focused design. 
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="websites">
+        <div class="fade-in">
+            <p class="info">
+                Explore my website features, pricing, animations, and live project examples.
+            </p>
+        </div>
+
+        <div class="fade-in">
+            <div class="buttons">
+                <div class="button">
+                    <a href="features.html" class="btn">View My Work & Services</a>
+                    <script>
+                        /* Script to set delay of button on click */
+                        document.querySelector('.btn').addEventListener('click', function(e) {
+                            e.preventDefault();
+                            const url = this.href;
+
+                            setTimeout(() => {
+                                window.location.href = url;
+                            }, 500);
+                        });
+                    </script>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <img src="gallery/logo.png" alt="logo" class="foot-logo">
+        <p>Custom Websites for Wedding & Small Businesses</p>
+        <p>gnsito.freelance@gmail.com</p>
+        <section class="links">
+            <h3>Quick Links</h3>
+            <section class="foot-nav">
+                <a href="index.html">Front Page</a>
+                <a href="features.html">Design & Features</a>
+                <a href="mywork.html">My Work</a>
+                <a href="pricing.html">Pricing</a>
+            </section>
+            <a onclick="window.location.href='mailto:gnsito.freelance@gmail.com'">Email Me</a>
+        </section>
+        <p>© 2026 Gansito Freelance. All rights reserved.</p>
+    </footer>
+
+
+</body>
+</html>

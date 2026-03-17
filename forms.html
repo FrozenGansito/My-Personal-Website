@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!--
+        GNSITO Freelance Web Forms Page
+
+        Author: Jose Sanchez
+        Date: 3/6/2026
+
+        Filename: forms.html
+    -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms & User Interaction</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="forms-styles.css">
+    <script src="fade-animation.js" defer></script>
+    <script src="forms.js" defer></script>
+</head>
+<body>
+
+    <header>
+
+        <div class="top-header">
+            <a href="features.html" class="back-btn">
+                <img src="gallery/back-arrow.png" alt="Back Button">
+            </a>
+        </div>
+
+        <div class="logo">
+            <img src="gallery/logo.png" alt="">
+        </div>
+
+    </header>
+
+    <section class="main">
+        <div class="intro">
+
+            <div class="title">
+                <h1>Forms & RSVP</h1>
+            </div>
+
+            <div class="info">
+                <p>
+                    Form layouts and interaction elements determine how visitors
+                    submit information and communicate through your website. These
+                    features focus on clarity, usability, and responsive
+                    feedback for a smoother user experience.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <form id="contactForm1" novalidate>
+                <div class="card-header1">
+                    <h2>Contact Form</h2>
+                    <p>
+                        Fill out the form and I'll get back to you within 24 hours.
+                    </p>
+                    <div class="note">
+                        <h4>*This form is for demonstration only.*</h4>
+                    </div>
+                </div>
+
+                <div class="row1">
+                    <div class="form-group1">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" placeholder="John">
+                        <span class="error-msg" id="firstNameErr">Required</span>
+                    </div>
+                    <div class="form-group1">
+                        <label for = "lastName">Last Name</label>
+                        <input type="text" id="lastName" placeholder="Smith">
+                        <span class="error-msg" id="lastNameErr">Required</span>
+                    </div>
+                </div>
+
+                <div class="form-group1">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="john@example.com">
+                    <span class="error-msg" id="emailErr">Enter a valid email</span>
+                </div>
+
+                <div class="form-group1">
+                    <label for="message">Message</label>
+                    <textarea id="message" placeholder="Type message here"></textarea>
+                    <span class="error-msg" id="messageErr">Please write a message</span>
+                </div>
+
+                <div id="successMsg" style="display:none; color: green; margin-bottom: 12px; font-weight: 500;">
+                    Message sent! I'll get back to you within 24 hours.
+                </div>
+
+
+                <button type="submit" id="submitBtn">Send Message</button>
+            </form>
+
+        </div>
+
+        <div class="card">
+            <div class="rsvp-section">
+
+                <div class="card">
+                    <h2>RSVP Forms</h2>
+                    <p>
+                        RSVP forms are built using Google Forms, allowing customizable
+                        questions while automatically collecting and organizing
+                        guest responses for easy attendance tracking. 
+                    </p>
+                </div>
+                
+                <div class="card">
+                    <div class="note">
+                        <h4>*This form is for demonstration only.*</h4>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="rsvp-form">
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdw97m1ruSdpCGNOvcku8XRCUffuRIAWsp3GlLL7hS-jgXqKw/viewform?embedded=true"
+                        width="100%" height="1400" frameborder="0">
+                        </iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <img src="gallery/logo.png" alt="logo" class="foot-logo">
+        <p>Custom Websites for Wedding & Small Businesses</p>
+        <p>gnsito.freelance@gmail.com</p>
+        <section class="links">
+            <h3>Quick Links</h3>
+            <section class="foot-nav">
+                <a href="index.html">Front Page</a>
+                <a href="features.html">Design & Features</a>
+                <a href="mywork.html">My Work</a>
+                <a href="pricing.html">Pricing</a>
+            </section>
+            <a onclick="window.location.href='mailto:gnsito.freelance@gmail.com'">Email Me</a>
+        </section>
+        <p>© 2026 Gansito Freelance. All rights reserved.</p>
+    </footer>
+
+
+</body>
+</html>

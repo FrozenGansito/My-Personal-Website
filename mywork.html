@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!--
+        GNSITO Freelance Web My Work Page
+
+        Author: Jose Sanchez
+        Date: 3/10/2026
+
+        Filename: mywork.html
+    -->
+
+<head>
+    <title>My Work</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mywork-styles.css">
+    <script src="fade-animation.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    
+    <!-- Header Section -->
+
+    <header>
+
+        <div class="top-header">
+
+            <a href="index.html" class="back-btn">
+                <img src="gallery/back-arrow.png" alt="Back Button">
+            </a>
+
+        </div>
+
+        <div class="logo">
+            <img src="gallery/logo.png" alt="logo">
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="features.html" class="nav1">Design & Features</a></li>
+                <li><a href="mywork.html" class="nav2">My Work</a></li>
+                <li><a href="pricing.html" class="nav3">Pricing</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <div class="intro">
+            <div class="title">
+                <h1>My Work</h1>
+            </div>
+
+            <div class="info">
+                A selection of website projects created for real businesses
+                as well as concept demonstrations showcasing different
+                design styles and features.
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="clients">
+                <h2 class="title">Real Business Projects</h2>
+            
+                <!-- Villeda Events -->
+                <div class="client">
+                    <div class="card">
+                            <h4>Villeda Events</h4>
+                            <p>(Desktop & Mobile)</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="images">
+                            <div class="mobile">
+                                <img src="gallery/VE-mobile.png" alt="" class="display">
+                            </div>
+                            <div class="web">
+                                <img src="gallery/VE-web1.png" alt="" class="display">
+                                <img src="gallery/VE-web2.png" alt="" class="display">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="info">
+                            <p>
+                                A local table and chair rental business located in 
+                                Chilton County that also creates custom piñatas.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="button">
+                            <a href="https://villedaevents.com/index.html" class="btn" target="_blank">Visit Site</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+            <div class="clients">
+                <div class="card">
+                    <h2 class="title">Wedding Website Projects</h2>
+                    <p class="info">
+                        Some wedding websites are kept private until after
+                        the wedding date to respect the couple's privacy.
+                    </p>
+                </div>
+            
+                <!-- Wedding -->
+                <div class="client">
+                    <div class="card">
+                        <h4>Private Wedding Website</h4>
+                        <p>(Mobile Only)</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="images-mobile">
+                            <img src="gallery/GL2.jpg" alt="" class="display">
+                            <img src="gallery/GL1.jpg" alt="" class="display">
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="description">
+                            <p>
+                                Custom wedding invitation website including RSVP forms,
+                                photo galleries, event details, hotel & travel,
+                                and bilingual support. 
+                            </p>
+                            <p>
+                                Portolio preview available after the wedding date.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <div class="card">
+            <div class="clients">
+                <h2 class="title">Concept/Demo Websites</h2>
+
+                <!-- Wedding -->
+                <div class="client">
+                    <div class="card">
+                        <h4>Emily & James Wedding</h4>
+                        <p>(Mobile Only)</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="images-mobile">
+                            <img src="gallery/EB2.png" alt="" class="display">
+                            <img src="gallery/EB1.png" alt="" class="display">
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="description">
+                            <p>
+                                A modern wedding website design created to demonstrate
+                                RSVP forms, photo galleries, and guest information pages.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="button">
+                            <a href="https://frozengansito.github.io/Emily-James_WeddingPrompt/index.html" 
+                            class="btn" target="_blank">Visit Site</a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="lightbox" id="lightbox">
+            <span class="close">&times;</span>
+            <img class="lightbox-content" id="lightbox-img">
+        </div>
+
+        <script>
+            const galleryImages = document.querySelectorAll(".display");
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImg = document.getElementById("lightbox-img");
+            const closeBtn = document.querySelector(".close");
+
+            galleryImages.forEach(img => {
+                img.addEventListener("click", () => {
+                    lightbox.style.display = "flex";
+                    lightboxImg.src = img.src;
+                });
+            });
+
+            closeBtn.addEventListener("click", () => {
+                lightbox.style.display = "none";
+            });
+
+            lightbox.addEventListener("click", (e) => {
+                if(e.target !== lightboxImg){
+                    lightbox.style.display = "none";
+                }
+            });
+        </script>
+
+
+    </main>
+
+    <footer>
+        <img src="gallery/logo.png" alt="logo" class="foot-logo">
+        <p>Custom Websites for Wedding & Small Businesses</p>
+        <p>gnsito.freelance@gmail.com</p>
+        <section class="links">
+            <h3>Quick Links</h3>
+            <section class="foot-nav">
+                <a href="index.html">Front Page</a>
+                <a href="features.html">Design & Features</a>
+                <a href="mywork.html">My Work</a>
+                <a href="pricing.html">Pricing</a>
+            </section>
+            <a onclick="window.location.href='mailto:gnsito.freelance@gmail.com'">Email Me</a>
+        </section>
+        <p>© 2026 Gansito Freelance. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,337 @@
+@charset "utf-8";
+
+/*
+    Freelance Maps & Integration Stylesheet
+    Author: Jose Sanchez
+    Date: 3/9/2026
+
+    Filename: maps-styles.css
+*/
+
+/* Color Palette */
+:root {
+    --primary-color: #E7E2DD;
+    --secondary-color: #D1C7BD;
+    --accent-color: #AF8C5C;
+    --footer-color: #474440;
+}
+
+/* Font Styles */
+.figtree-regular {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Fade-in Animation on Scroll*/
+.card {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.3s ease, transform 1.3s ease;
+}
+
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*Slide in Animations*/
+/* From top to bottom */
+.logo {
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: slideIn 1.3s ease forwards;
+}
+
+/* From right to left */
+.title {
+    opacity: 0;
+    transform: translateX(50px);
+    animation: slideIn 1.3s ease forwards;
+}
+
+/* From left to right */
+.back-btn, .info {
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideIn 1.3s ease forwards;
+}
+
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* HTML & Body Styles */
+html {
+    background-color: var(--primary-color);
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: "Figtree", sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* Top Header Styles */
+.top-header {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.back-btn {
+    border: none;
+    padding: 10px;
+}
+
+.back-btn img {
+    width: 100%;
+    height: 50px;
+}
+
+
+/* Logo Styles */
+.logo {
+    justify-items: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.logo img {
+    display: block;
+    width: 80%;
+}
+
+/* Main Styles */
+.main {
+    background-color: var(--secondary-color);
+    padding-top: 30px;
+    text-align: center;
+}
+
+.main p {
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+}
+
+h2 {
+    text-decoration: underline var(--accent-color);
+    padding-top: 20px;
+    font-size: 1.7rem;
+}
+
+/* Intro Styles */
+
+
+.title {
+    text-decoration: underline;
+    text-decoration-color: var(--accent-color);
+}
+
+.info {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+}
+
+.location {
+    padding-top: 5px;
+}
+
+/* Map Styles */
+.map-standard {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.map-pic {
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.oakmtn-pic {
+    width: 100%;
+    aspect-ratio: 7/5;
+    border-radius: 10px;
+}
+
+.button {
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 0.75rem;
+    background-color: #000000;
+    border: 1px solid #000000;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.btn {
+    display: block;
+    text-decoration: none;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 0.75rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--accent-color);
+    color: black;
+    transform: translateY(-0.2rem);
+    transition: transform 0.1s ease;
+}
+
+.button:hover .btn {
+    /* Pull the button upwards when hovered */
+    transform: translateY(-0.33rem);
+}
+
+.button:active .btn {
+    /* Push the button downwards when pressed */
+    transform: translateY(0);
+}
+
+
+.map-embed {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    border-top: 2px solid var(--accent-color);
+    margin-top: 50px;
+}
+
+.map-embed .intro {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.map-container {
+    width: 100%;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 300px;
+}
+
+
+
+/* Footer Styles */
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--footer-color);
+    margin-top: 0;
+    text-align: center;
+    border-top: 2px solid var(--accent-color);
+}
+
+footer img {
+    width: 100%;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.foot-logo {
+    display: block;
+    width: 8rem;
+    padding-top: 20px;
+}
+
+footer p {
+    margin: 5px;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5rem;
+}
+
+.foot-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+}
+
+.links a {
+    text-decoration: underline var(--accent-color);
+    color: var(--accent-color);
+    padding: 5px;
+}
+
+.links h3 {
+    margin-bottom: 5px;
+    text-decoration: none;
+}
+
+
+@media (min-width: 900px) {
+    body {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    /* Logo Styles */
+    .logo {
+        width: 45rem;
+        max-width: 50rem;
+        margin: 0 auto;
+    }
+
+    p {
+        font-size: 1.3rem;
+        line-height: 2rem;
+    }
+
+    .card, .intro {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .map-pic {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .button {
+        width: 40%;
+        margin: 0 auto;
+    }
+
+    .map-container {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .map-embed {
+        padding-bottom: 5rem;
+    }
+
+    /* Footer Styles */
+    footer {
+        font-size: larger;
+    }
+
+    footer p {
+        font-size: 1rem;
+    }
+
+}

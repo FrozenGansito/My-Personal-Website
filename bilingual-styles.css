@@ -1,0 +1,306 @@
+@charset "utf-8";
+
+/*
+    Freelance Maps & Integration Stylesheet
+    Author: Jose Sanchez
+    Date: 3/9/2026
+
+    Filename: maps-styles.css
+*/
+
+/* Color Palette */
+:root {
+    --primary-color: #E7E2DD;
+    --secondary-color: #D1C7BD;
+    --accent-color: #AF8C5C;
+    --footer-color: #474440;
+}
+
+/* Font Styles */
+.figtree-regular {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Fade-in Animation on Scroll*/
+.card {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.3s ease, transform 1.3s ease;
+}
+
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*Slide in Animations*/
+/* From top to bottom */
+.logo {
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: slideIn 1.3s ease forwards;
+}
+
+/* From right to left */
+.title {
+    opacity: 0;
+    transform: translateX(50px);
+    animation: slideIn 1.3s ease forwards;
+}
+
+/* From left to right */
+.back-btn, .info {
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideIn 1.3s ease forwards;
+}
+
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* HTML & Body Styles */
+html {
+    background-color: var(--primary-color);
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: "Figtree", sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* Top Header Styles */
+.top-header {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.back-btn {
+    border: none;
+    padding: 10px;
+}
+
+.back-btn img {
+    width: 100%;
+    height: 50px;
+}
+
+
+/* Logo Styles */
+.logo {
+    justify-items: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.logo img {
+    display: block;
+    width: 80%;
+}
+
+/* Main Styles */
+.main {
+    background-color: var(--secondary-color);
+    padding-top: 30px;
+    text-align: center;
+}
+
+.main p {
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+}
+
+h2 {
+    text-decoration: underline var(--accent-color);
+    padding-top: 20px;
+    font-size: 1.7rem;
+}
+
+/* Intro Styles */
+
+
+.title {
+    text-decoration: underline;
+    text-decoration-color: var(--accent-color);
+}
+
+.info {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+}
+
+/* Language Toggle */
+/* Hides Spanish by default */
+.es {
+    display: none;
+}
+
+/* Styling for toggle */
+.language-toggle {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    justify-content: space-between;
+    padding: 15px;
+    height: 40px;
+}
+
+.language-toggle p {
+    margin: 0;
+    padding-top: 0.3rem;
+}
+
+.language-toggle button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.3rem;
+    border-radius: 20px;
+    background-color: var(--accent-color);
+    box-shadow: inset -2px -2px 6px rgb(55, 43, 21),
+        inset 2px 2px 4px rgb(239, 183, 109),
+        2px 2px 4px rgb(121, 121, 121);
+}
+
+.language-toggle .active {
+    background-color: var(--accent-color);
+    border-radius: 20px;
+    box-shadow: inset -2px -2px 6px rgb(239, 183, 109),
+        inset 2px 2px 6px rgb(55, 43, 21);
+    background-color: #866b45;
+}
+
+
+
+/* Supported Areas Styles */
+.description, .support {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.support ul {
+    list-style-position: inside;
+    font-size: 1.3rem;
+    padding: 0;
+    padding-bottom: 30px;
+    margin: 0;
+}
+
+
+
+
+/* Footer Styles */
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--footer-color);
+    margin-top: 0;
+    text-align: center;
+    border-top: 2px solid var(--accent-color);
+}
+
+footer img {
+    width: 100%;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.foot-logo {
+    display: block;
+    width: 8rem;
+    padding-top: 20px;
+}
+
+footer p {
+    margin: 5px;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5rem;
+}
+
+.foot-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+}
+
+.links a {
+    text-decoration: underline var(--accent-color);
+    color: var(--accent-color);
+    padding: 5px;
+}
+
+.links h3 {
+    margin-bottom: 5px;
+    text-decoration: none;
+}
+
+
+@media (min-width: 900px) {
+    body {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    /* Logo Styles */
+    .logo {
+        width: 45rem;
+        max-width: 50rem;
+        margin: 0 auto;
+    }
+
+    p {
+        font-size: 1.3rem;
+        line-height: 2rem;
+    }
+
+    .card, .intro {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .language-toggle {
+        width: 40%;
+        margin: 0 auto;
+    }
+
+    /* Footer Styles */
+    footer {
+        font-size: larger;
+    }
+
+    footer p {
+        font-size: 1rem;
+    }
+
+}

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!--
+        GNSITO Freelance Web Photo Styles Page
+
+        Author: Jose Sanchez
+        Date: 2/22/2026
+
+        Filename: photos.html
+    -->
+
+<head>
+    <title>Photo Styles Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="photo_styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    
+    <!-- Header Section -->
+
+    <header>
+
+        <div class="top-header">
+
+            <a href="features.html" class="back-btn">
+                <img src="gallery/back-arrow.png" alt="Back Button">
+            </a>
+
+        </div>
+
+        <div class="logo">
+            <img src="gallery/logo.png" alt="logo">
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="photos.html" class="nav1">Photo Styles</a></li>
+                <li><a href="galleries.html" class="nav2">Gallery Styles</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <article class="main">
+
+        <!--Intro-->
+        <div class="intro">
+
+            <div class="title">
+                <h1>Photo Styles</h1>
+            </div>
+
+            <div class="info">
+                <p>
+                    View the available photo styling options below.
+                    Each style offers a different presentation, 
+                    allowing you to personalize the look of your website.
+                </p>
+            </div>
+
+        </div>
+
+
+        <!--Photo Tiers-->
+        <section class="photo-tiers">
+
+        <!-- Basic Photo Display -->
+         
+            <section class="card">
+                <div class="basic">
+                    <div class="photo-title">
+                        <h2>Basic Photo Display</h2>
+                        <p><cite>Included</cite></p>
+                    </div>
+
+                    <div class="basic-img">
+                        <img src="gallery/diner-couple.png" alt="">
+                    </div>
+
+                    <div class="description">
+                        <p>
+                            Standard rectangular / rounded image<br>
+                            Clean layout placement<br>
+                            Mobile optimized<br>
+                            Balanced spacing
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card">
+                <div class="shadow">
+                    <div class="photo-title">
+                        <h2>Shadow Photo Display</h2>
+                    </div>
+
+                    <div class="shadow-img">
+                        <img src="gallery/diner-couple.png" alt="">
+                    </div>
+
+                    <div class="description">
+                        <p>
+                            Adds subtle depth and elevation for a modern,
+                            polished look.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card">
+                <div class="framed">
+                    <div class="photo-title">
+                        <h2>Framed Photo Display</h2>
+                    </div>
+
+                    <div class="framed-img">
+                        <img src="gallery/diner-couple.png" alt="">
+                    </div>
+
+                    <div class="description">
+                        <p>
+                            Clean framing that subtly defines each image.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card">
+                <div class="polaroid">
+                    <div class="photo-title">
+                        <h2>Polaroid Photo Display</h2>
+                    </div>
+
+                    <div class="polaroid-img">
+                        <img src="gallery/diner-couple.png" alt="">
+                        <p>custom text here</p>
+                    </div>
+
+                    <div class="description">
+                        <p>
+                            A nostalgic, personailty-driven display.<br>
+                            Includes a combination of frame and shadow styles with rotation
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card">
+                <div class="overlay-section">
+                    <div class="photo-title">
+                        <h2>Overlay Photo Display</h2>
+                    </div>
+
+                    <div class="overlay-img" onclick="this.classList.toggle('active')">
+                        <img src="gallery/diner-couple.png" alt="">
+                        <div class="overlay">
+                            <div class="overlay-text">Add your text here</div>
+                        </div>
+                    </div>
+
+                    <div class="description">
+                        <p>
+                            Clicking an image reveals a darkened overlay with layered text
+                            for added detail or emphasis.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card">
+                <div class="window">
+                    <div class="photo-title">
+                        <h2>Cinematic View Style</h2>
+                    </div>
+
+                    <div class="window-img">
+                        <img src="gallery/diner-couple.png" alt="">
+                    </div>
+
+                    <div class="description">
+                        <p>
+                            Designed to feel like passing by a window, 
+                            this style adds motion and depth as visitors scroll, 
+                            elevating the presentation beyond a static image.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+        </section>
+
+    </article>
+
+    <footer>
+        <img src="gallery/logo.png" alt="logo" class="foot-logo">
+        <p>Custom Websites for Wedding & Small Businesses</p>
+        <p>gnsito.freelance@gmail.com</p>
+        <section class="links">
+            <h3>Quick Links</h3>
+            <section class="foot-nav">
+                <a href="index.html">Front Page</a>
+                <a href="features.html">Design & Features</a>
+                <a href="mywork.html">My Work</a>
+                <a href="pricing.html">Pricing</a>
+            </section>
+            <a onclick="window.location.href='mailto:gnsito.freelance@gmail.com'">Email Me</a>
+        </section>
+        <p>© 2026 Gansito Freelance. All rights reserved.</p>
+    </footer>
+
+    <script src="fade-animation.js" defer></script>
+</body>
+</html>

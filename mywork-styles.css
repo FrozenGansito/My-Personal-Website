@@ -1,0 +1,421 @@
+@charset "utf-8";
+
+/*
+    Freelance My Work Stylesheet
+    Author: Jose Sanchez
+    Date: 3/10/2026
+
+    Filename: mywork-styles.css
+*/
+
+/* Color Palette */
+:root {
+    --primary-color: #E7E2DD;
+    --secondary-color: #D1C7BD;
+    --accent-color: #AF8C5C;
+    --footer-color: #474440;
+}
+
+/* Font Styles */
+.figtree-regular {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+/*Slide in Animations*/
+/* From top to bottom */
+.logo {
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: slideIn 1.3s ease forwards;
+}
+
+/* From right to left */
+.nav, .intro .info {
+    opacity: 0;
+    transform: translateX(50px);
+    animation: slideIn 1.3s ease forwards;
+}
+
+/* From left to right */
+.back-btn, .intro .title {
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideIn 1.3s ease forwards;
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Fade-in Animation on Scroll*/
+.card {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.3s ease, transform 1.3s ease;
+}
+
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* HTML & Body Styles */
+html {
+    background-color: var(--primary-color);
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: "Figtree", sans-serif;
+    overflow-x: hidden;
+}
+
+main {
+    background-color: var(--secondary-color);
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Top Header Styles */
+.top-header {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.back-btn {
+    border: none;
+    padding: 10px;
+}
+
+.back-btn img {
+    width: 100%;
+    height: 50px;
+}
+
+
+/* Logo Styles */
+.logo {
+    justify-items: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.logo img {
+    display: block;
+    width: 80%;
+}
+
+
+/* Navigation Styles */
+.nav {
+    width: 100%;
+}
+
+.nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+    justify-content: center;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+    padding: 8px 10px 0px 10px;
+    margin-bottom: 0;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.nav1, .nav3 {
+    background-color: #e1d4c7;
+}
+
+.nav2 {
+    background-color: var(--secondary-color)
+}
+
+/* Intro Styles */
+.intro  {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.title {
+    text-decoration: underline var(--accent-color);
+}
+
+.info {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+}
+
+h4 {
+    font-size: 1.4rem;
+    text-decoration: none;
+    padding-top: 10px;
+    margin: 0;
+}
+
+.description p {
+    font-size: 1.3rem;
+}
+
+.description {
+    padding-bottom: 10px;
+}
+
+/* Images Styles */
+.images {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: baseline;
+    padding: 20px 0;
+}
+
+.images img {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 2px 2px 6px gray;
+}
+
+.mobile {
+    width: 40%;
+}
+
+.web {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.images-mobile {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.images-mobile img {
+    width: 50%;
+    border-radius: 5px;
+    box-shadow: 2px 2px 6px gray;
+}
+
+
+/* Lightbox Styles */ 
+.lightbox {
+    display:none;
+    position:fixed;
+    z-index:999;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.9);
+    justify-content:center;
+    align-items:center;
+}
+
+.lightbox-content {
+    max-width: 80%;
+    max-height: 80%
+}
+
+.close {
+    position:absolute;
+    top:20px;
+    right:40px;
+    font-size:40px;
+    color:white;
+    cursor:pointer;
+}
+
+
+/* Button Styles */
+.button {
+    width: 40%;
+    margin: 0 auto;
+    border-radius: 0.75rem;
+    background-color: #000000;
+    border: 1px solid #000000;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.btn {
+    display: block;
+    text-decoration: none;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 0.75rem;
+    padding: 0.5rem 1rem;
+    background: var(--accent-color);
+    color: black;
+    transform: translateY(-0.2rem);
+    transition: transform 0.1s ease;
+}
+
+.button:hover .btn {
+    /* Pull the button upwards when hovered */
+    transform: translateY(-0.33rem);
+}
+
+.button:active .btn {
+    /* Push the button downwards when pressed */
+    transform: translateY(0);
+}
+
+/* Card Styles */
+.clients {
+    width: 90%;
+    margin: 0 auto;
+    padding: 30px 0;
+    margin-top: 30px;
+    border-top: 2px solid var(--accent-color);
+}
+
+
+/* Footer Styles */
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--footer-color);
+    margin-top: 0;
+    text-align: center;
+    border-top: 2px solid var(--accent-color);
+}
+
+footer img {
+    width: 100%;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.foot-logo {
+    display: block;
+    width: 8rem;
+    padding-top: 20px;
+}
+
+footer p {
+    margin: 5px;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5rem;
+}
+
+.foot-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+}
+
+.links a {
+    text-decoration: underline var(--accent-color);
+    color: var(--accent-color);
+    padding: 5px;
+}
+
+.links h3 {
+    margin-bottom: 5px;
+    text-decoration: none;
+}
+
+
+@media (max-width: 400px) {
+    .nav a {
+        font-size: 1.1rem;
+    }
+
+    .foot-nav {
+        width: 70%;
+    }
+}
+
+@media (max-width: 350px) {
+    .nav a {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 900px) {
+    body {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    /* Logo Styles */
+    .logo {
+        width: 45rem;
+        max-width: 50rem;
+        margin: 0 auto;
+    }
+
+    /* Navigation Styles */
+    .nav ul {
+        gap: 5rem;
+    }
+    
+    .nav a {
+        padding: 8px 30px 0px;
+    }
+
+    /* Images Styles */
+    .clients {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .images {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .images-mobile img {
+        width: 30%;
+    }
+
+    /* Footer Styles */
+    footer {
+        font-size: larger;
+    }
+
+    footer p {
+        font-size: 1rem;
+    }
+
+
+}
