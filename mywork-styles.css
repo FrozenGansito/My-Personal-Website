@@ -106,7 +106,8 @@ main {
 
 /* Logo Styles */
 .logo {
-    justify-items: center;
+    display: flex;
+    justify-content: center;
     margin-top: 30px;
     margin-bottom: 50px;
     width: 100%;
