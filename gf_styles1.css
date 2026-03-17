@@ -153,6 +153,11 @@ body {
     transform: translateY(0);
 }
 
+.button:active .btn,
+.button.pressed .btn {
+    transform: translateY(0);
+}
+
 .explore {
     margin-top: 2rem;
 }

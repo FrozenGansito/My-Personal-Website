@@ -74,11 +74,22 @@
                 <div class="button">
                     <a href="features.html" class="btn">View My Work & Services</a>
                     <script>
-                        /* Script to set delay of button on click */
-                        document.querySelector('.btn').addEventListener('click', function(e) {
+                        const button = document.querySelector('.button');
+                        const btn = document.querySelector('.btn');
+
+                        // Handle touch events for mobile
+                        button.addEventListener('touchstart', function() {
+                            button.classList.add('pressed');
+                        }, { passive: true });
+
+                        button.addEventListener('touchend', function() {
+                            button.classList.remove('pressed');
+                        });
+
+                        // Handle navigation with delay
+                        btn.addEventListener('click', function(e) {
                             e.preventDefault();
                             const url = this.href;
-
                             setTimeout(() => {
                                 window.location.href = url;
                             }, 500);
