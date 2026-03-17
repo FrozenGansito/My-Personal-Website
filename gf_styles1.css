@@ -62,6 +62,8 @@ body {
 
 /* Logo Styles */
 .logo {
+    display: flex;
+    justify-content: center;
     margin-top: 70px;
     margin-bottom: 50px;
     width: 100%;
