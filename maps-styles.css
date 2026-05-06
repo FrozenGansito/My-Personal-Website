@@ -193,11 +193,6 @@ h2 {
     transition: transform 0.1s ease;
 }
 
-.button:hover .btn {
-    /* Pull the button upwards when hovered */
-    transform: translateY(-0.33rem);
-}
-
 .button:active .btn {
     /* Push the button downwards when pressed */
     transform: translateY(0);

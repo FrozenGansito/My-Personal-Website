@@ -172,12 +172,46 @@
 
                     <div class="card">
                         <div class="button">
-                            <a href="https://frozengansito.github.io/Emily-James_WeddingPrompt/index.html" 
+                            <a href="https://frozengansito.github.io/Emily-James_WeddingPrompt/index.html"
                             class="btn" target="_blank">Visit Site</a>
                         </div>
                     </div>
                 </div>
 
+                <!-- Loco Lunas Tacos -->
+                <div class="client">
+                    <div class="card">
+                        <h4>Loco Lunas Tacos</h4>
+                        <p>(Desktop & Mobile)</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="images-mixed">
+                            <div class="portrait-row">
+                                <img src="gallery/LL_web1.jpg" alt="Loco Lunas Tacos mobile home screen" class="display">
+                                <img src="gallery/LL_web2.jpg" alt="Loco Lunas Tacos mobile menu screen" class="display">
+                            </div>
+                            <div class="landscape-row">
+                                <img src="gallery/LL_web3.png" alt="Loco Lunas Tacos desktop view" class="display">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="description">
+                            <p>
+                                A concept website for a food truck featuring a full menu,
+                                weekly location schedule, and bold street taco branding.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="button">
+                            <a href="https://frozengansito.github.io/Loco-Lunas-Tacos/" class="btn" target="_blank">Visit Site</a>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>
@@ -208,6 +242,19 @@
                 if(e.target !== lightboxImg){
                     lightbox.style.display = "none";
                 }
+            });
+
+            document.querySelectorAll(".btn").forEach(btn => {
+                btn.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    const href = this.href;
+                    const target = this.target;
+                    this.classList.add("pressed");
+                    setTimeout(() => this.classList.remove("pressed"), 200);
+                    setTimeout(() => {
+                        target === "_blank" ? window.open(href, "_blank") : window.location.href = href;
+                    }, 350);
+                });
             });
         </script>
 

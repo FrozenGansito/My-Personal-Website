@@ -293,13 +293,14 @@ footer p {
     }
 
     .card-container {
-        grid-template-columns: repeat(4, 1fr);
-        width: 90%;
+        grid-template-columns: repeat(3, 1fr);
+        width: 70%;
         margin: 0 auto;
     }
 
     .card:last-child:nth-child(odd) {
-        width: 33.333%;
+        grid-column: auto;
+        width: 90%;
     }
 
     /* Footer Styles */
