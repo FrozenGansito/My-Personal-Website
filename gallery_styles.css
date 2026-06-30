@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 
 /*
     Freelance Home Stylesheet
@@ -7,23 +7,6 @@
 
     Filename: gf_stylesheet1.css
 */
-
-/* Color Palette */
-:root {
-    --primary-color: #E7E2DD;
-    --secondary-color: #D1C7BD;
-    --accent-color: #AF8C5C;
-    --footer-color: #474440;
-}
-
-/* Font Styles */
-
-.figtree-regular {
-  font-family: "Figtree", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-}
 
 
 /* HTML & Body Styles */
@@ -40,8 +23,6 @@ body {
     font-family: "Figtree", sans-serif;
     overflow-x: hidden;
 }
-
-
 
 /* Animation Styles */
 /* Fade-in On Scroll */
@@ -78,16 +59,6 @@ body {
     animation: slideIn 1.3s ease forwards;
 }
 
-
-@keyframes slideIn {
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-
-
 /* Top Header Styles */
 .top-header {
     display: flex;
@@ -104,7 +75,6 @@ body {
     height: 50px;
 }
 
-
 /* Logo Styles */
 .logo {
     display: flex;
@@ -118,7 +88,6 @@ body {
     display: block;
     width: 80%;
 }
-
 
 /* Navigation Styles */
 .nav {
@@ -152,7 +121,6 @@ body {
 .nav2 {
     background-color: var(--secondary-color);
 }
-
 
 /* Main Styles */
 .main {
@@ -195,9 +163,6 @@ h2, h3 {
     line-height: 1.7rem;
 }
 
-
-
-
 /* Gallery Grid Styles */
 .basic-grid, .interactive-grid, .hover-grid, .filter-grid,
 .enhanced-grid, .lightbox-grid {
@@ -208,7 +173,6 @@ h2, h3 {
     gap: 5px;
 }
 
-
 .basic-grid img, .hover-grid img, .filter-grid img,
 .lightbox-grid img {
     width: 100%;
@@ -216,7 +180,6 @@ h2, h3 {
     object-fit: cover;
     aspect-ratio: 3 / 4;
 }
-
 
 /* Interactive Gallery */
 .interactive-grid img {
@@ -233,14 +196,12 @@ h2, h3 {
     box-shadow: black 2px 2px 5px;
 }
 
-
 /* Hover Gallery*/
 .hover-grid img:hover {
     transform: scale(1.1);
     box-shadow: black 3px 3px 5px;
     transition: transform 0.5s ease;
 }
-
 
 /* Filter Gallery */
 .item.hide {
@@ -270,7 +231,6 @@ h2, h3 {
 .filter button:active {
     background-color: var(--accent-color);
 }
-
 
 /* Lightbox Gallery */
 #lightbox {
@@ -346,62 +306,6 @@ h2, h3 {
 	font-size: 0.9rem;
 }
 
-
-/* Footer Styles */
-footer {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--footer-color);
-    margin-top: 0;
-    text-align: center;
-    border-top: 2px solid var(--accent-color);
-}
-
-footer img {
-    width: 100%;
-    align-items: center;
-    margin: 0 auto;
-}
-
-.foot-logo {
-    display: block;
-    width: 8rem;
-    padding-top: 20px;
-}
-
-footer p {
-    margin: 5px;
-    font-size: 0.9rem;
-    color: var(--primary-color);
-}
-
-.links {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.5rem;
-}
-
-.foot-nav {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 60%;
-    margin: 0 auto;
-    text-align: center;
-    justify-content: center;
-}
-
-.links a {
-    text-decoration: underline var(--accent-color);
-    color: var(--accent-color);
-    padding: 5px;
-}
-
-.links h3 {
-    margin-bottom: 5px;
-    text-decoration: none;
-}
-
 @media (max-width: 380px) {
     .foot-nav {
         width: 70%;
@@ -411,7 +315,6 @@ footer p {
         font-size: 1rem;
     }
 }
-
 
 @media (min-width: 900px) {
     body {

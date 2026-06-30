@@ -18,24 +18,51 @@ faders.forEach(el => observer.observe(el));
 
 // Window Image Animation
 const windowImg = document.querySelector('.window-img');
-const parallaxImg = windowImg.querySelector('img');
 
-function updateParallax() {
-  const rect = windowImg.getBoundingClientRect();
-  const viewH = window.innerHeight;
+if (windowImg) {
+  const parallaxImg = windowImg.querySelector('img');
 
-  // 0 = window just appearing at bottom, 1 = window just leaving top
-  const progress = 1 - (rect.bottom / (viewH + rect.height));
-  const clamped = Math.max(0, Math.min(1, progress));
+  const updateParallax = () => {
+    const rect = windowImg.getBoundingClientRect();
+    const viewH = window.innerHeight;
 
-  // travel = the extra height we gave the image (40% of container)
-  const travel = windowImg.offsetHeight * 0.30;
-  parallaxImg.style.transform = `translateY(${clamped * travel}px)`;
+    // 0 = window just appearing at bottom, 1 = window just leaving top
+    const progress = 1 - (rect.bottom / (viewH + rect.height));
+    const clamped = Math.max(0, Math.min(1, progress));
+
+    // travel = the extra height we gave the image (40% of container)
+    const travel = windowImg.offsetHeight * 0.30;
+    parallaxImg.style.transform = `translateY(${clamped * travel}px)`;
+  };
+
+  window.addEventListener('scroll', updateParallax, { passive: true });
+  window.addEventListener('resize', updateParallax);
+  updateParallax();
 }
 
-window.addEventListener('scroll', updateParallax, { passive: true });
-window.addEventListener('resize', updateParallax);
-updateParallax();
+
+
+// Home Page CTA Button (touch press effect + delayed navigation)
+const homeCta = document.getElementById('home-cta');
+if (homeCta) {
+  const ctaBtn = homeCta.querySelector('.btn');
+
+  homeCta.addEventListener('touchstart', function() {
+    homeCta.classList.add('pressed');
+  }, { passive: true });
+
+  homeCta.addEventListener('touchend', function() {
+    homeCta.classList.remove('pressed');
+  });
+
+  ctaBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    const url = this.href;
+    setTimeout(() => {
+      window.location.href = url;
+    }, 500);
+  });
+}
 
 
 

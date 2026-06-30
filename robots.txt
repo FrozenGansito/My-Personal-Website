@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /demo-access.html
+Allow: /
+
+Sitemap: https://gnsitofreelance.com/sitemap.xml

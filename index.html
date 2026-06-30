@@ -13,6 +13,19 @@
     <title>GNSITO Freelance Web Development</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Custom website design for weddings and small businesses by GNSITO Freelance — modern, mobile-friendly sites built from scratch.">
+    <link rel="icon" type="image/png" href="gallery/logo.png">
+    <meta property="og:title" content="GNSITO Freelance Web Development">
+    <meta property="og:description" content="Custom website design for weddings and small businesses by GNSITO Freelance — modern, mobile-friendly sites built from scratch.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gnsitofreelance.com/">
+    <meta property="og:image" content="https://gnsitofreelance.com/gallery/logo.png">
+    <meta property="og:site_name" content="GNSITO Freelance">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="GNSITO Freelance Web Development">
+    <meta name="twitter:description" content="Custom website design for weddings and small businesses by GNSITO Freelance — modern, mobile-friendly sites built from scratch.">
+    <meta name="twitter:image" content="https://gnsitofreelance.com/gallery/logo.png">
+    <link rel="stylesheet" href="base.css">
     <link rel="stylesheet" href="gf_styles1.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -71,31 +84,8 @@
 
         <div class="fade-in">
             <div class="buttons">
-                <div class="button">
+                <div class="button" id="home-cta">
                     <a href="features.html" class="btn">View My Work & Services</a>
-                    <script>
-                        const button = document.querySelector('.button');
-                        const btn = document.querySelector('.btn');
-
-                        // Handle touch events for mobile
-                        button.addEventListener('touchstart', function() {
-                            button.classList.add('pressed');
-                        }, { passive: true });
-
-                        button.addEventListener('touchend', function() {
-                            button.classList.remove('pressed');
-                        });
-
-                        // Handle navigation with delay
-                        btn.addEventListener('click', function(e) {
-                            e.preventDefault();
-                            const url = this.href;
-                            setTimeout(() => {
-                                window.location.href = url;
-                            }, 500);
-                        });
-                    </script>
-
                 </div>
             </div>
         </div>

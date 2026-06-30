@@ -13,10 +13,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Design</title>
+    <title>Interactive Design | GNSITO Freelance</title>
+    <meta name="description" content="See interactive design elements and animations GNSITO Freelance can build into your website.">
+    <link rel="icon" type="image/png" href="gallery/logo.png">
+    <meta property="og:title" content="Interactive Design | GNSITO Freelance">
+    <meta property="og:description" content="See interactive design elements and animations GNSITO Freelance can build into your website.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gnsitofreelance.com/design.html">
+    <meta property="og:image" content="https://gnsitofreelance.com/gallery/logo.png">
+    <meta property="og:site_name" content="GNSITO Freelance">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Interactive Design | GNSITO Freelance">
+    <meta name="twitter:description" content="See interactive design elements and animations GNSITO Freelance can build into your website.">
+    <meta name="twitter:image" content="https://gnsitofreelance.com/gallery/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="base.css">
     <link rel="stylesheet" href="design-styles.css">
     <script src="fade-animation.js" defer></script>
 </head>
@@ -218,6 +231,34 @@
             </div>
         </div>
 
+        <div class="card hamburger-section">
+            <div class="title">
+                <h2>Hamburger Menu</h2>
+            </div>
+            <div class="info">
+                <p>
+                    A compact, icon-based menu that expands on tap — ideal for mobile-first
+                    layouts that need to keep navigation out of the way until it's needed.
+                </p>
+            </div>
+            <div class="demo-frame hamburger-demo">
+                <nav class="nav3">
+                    <span class="nav3-brand">Brand</span>
+                    <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </nav>
+                <ul class="hamburger-links" id="hamburgerLinks">
+                    <li><a href="javascript:void(0)">Home</a></li>
+                    <li><a href="javascript:void(0)">Work</a></li>
+                    <li><a href="javascript:void(0)">Pricing</a></li>
+                    <li><a href="javascript:void(0)">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
     </section>
 
 
@@ -254,6 +295,15 @@
             btn.addEventListener('touchcancel', function() {
                 this.classList.remove('pressed');
             });
+        });
+
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const hamburgerLinks = document.getElementById('hamburgerLinks');
+
+        hamburgerBtn.addEventListener('click', function() {
+            const isOpen = hamburgerLinks.classList.toggle('open');
+            hamburgerBtn.classList.toggle('open', isOpen);
+            hamburgerBtn.setAttribute('aria-expanded', isOpen);
         });
     </script>
 
