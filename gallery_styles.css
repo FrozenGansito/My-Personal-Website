@@ -306,6 +306,55 @@ h2, h3 {
 	font-size: 0.9rem;
 }
 
+/* Carousel Gallery */
+.carousel-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.carousel-track-container {
+    overflow: hidden;
+    flex: 1;
+    border-radius: 6px;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.4s ease;
+}
+
+.carousel-track img {
+    min-width: 100%;
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 3 / 4;
+    display: block;
+    user-select: none;
+}
+
+.carousel-btn {
+    background: var(--primary-color);
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+}
+
+.carousel-btn:active {
+    background-color: var(--accent-color);
+}
+
+
 @media (max-width: 380px) {
     .foot-nav {
         width: 70%;
@@ -342,6 +391,10 @@ h2, h3 {
     .basic-grid, .interactive-grid, .hover-grid, .filter-grid, .lightbox-grid {
         width: 60%;
         margin: 0 auto;
+    }
+
+    .carousel-wrapper {
+        width: 60%;
     }
 
     /* Footer Styles */

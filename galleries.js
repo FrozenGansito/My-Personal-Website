@@ -108,3 +108,40 @@ lightbox.addEventListener('touchend', (e) => {
     diff > 0 ? showNext() : showPrev();
   }
 });
+
+
+
+// Carousel Gallery
+const carouselTrack = document.querySelector('.carousel-track');
+const carouselSlides = Array.from(carouselTrack ? carouselTrack.children : []);
+
+let carouselIndex = 0;
+
+function goToSlide(index) {
+  carouselIndex = index;
+  carouselTrack.style.transform = `translateX(-${carouselIndex * 100}%)`;
+}
+
+document.querySelector('.carousel-prev').addEventListener('click', () => {
+  goToSlide((carouselIndex - 1 + carouselSlides.length) % carouselSlides.length);
+});
+
+document.querySelector('.carousel-next').addEventListener('click', () => {
+  goToSlide((carouselIndex + 1) % carouselSlides.length);
+});
+
+// Swipe support for carousel
+let carouselTouchStart = 0;
+
+carouselTrack.addEventListener('touchstart', (e) => {
+  carouselTouchStart = e.touches[0].clientX;
+});
+
+carouselTrack.addEventListener('touchend', (e) => {
+  const diff = carouselTouchStart - e.changedTouches[0].clientX;
+  if (Math.abs(diff) > 50) {
+    diff > 0
+      ? goToSlide((carouselIndex + 1) % carouselSlides.length)
+      : goToSlide((carouselIndex - 1 + carouselSlides.length) % carouselSlides.length);
+  }
+});
